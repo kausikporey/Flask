@@ -1,0 +1,13 @@
+{
+    "params":
+    {
+        "localserver" : "True",
+        "local_url" : "mysql://root:@localhost/flask",
+        "production_url" : "mysql://root:@localhost/flask",
+        "fb_url" : "https://facebook.com",
+        "tw_url" : "https://twitter.com",
+        "gh_url" : "https://github.com",
+        "blog_name" : "Corona"
+    }
+
+}

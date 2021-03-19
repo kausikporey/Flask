@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<STYLE>
+a:link{
+  text-decoration: none;
+}
+a{
+  color:black;
+}
+</STYLE>
+
+
+<body>
+
+<div class="container">
+  <h2>Delete Post</h2>           
+  <table class="table">
+    <thead>
+      <tr>
+        <th>SlNo</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for post in posts %}
+        <tr>
+          <form action="/delete" method="POST">
+            <td>{{post.slno}}</td>
+            <td>{{post.postby}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.date}}</td>
+            <td><button type="submit" name="button" value={{post.slno}} class="btn btn-primary">delete</button></td>
+         </form>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
